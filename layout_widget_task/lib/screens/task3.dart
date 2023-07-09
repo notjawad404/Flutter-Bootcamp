@@ -11,7 +11,7 @@ class Task3 extends StatelessWidget {
       ),
       body: Container(
         margin: const EdgeInsets.all(20),
-        padding: const EdgeInsets.only(top: 50),
+        padding: const EdgeInsets.only(top: 50, left: 10, right: 10),
         decoration: BoxDecoration(
           color: Colors.lightBlue.shade800,
           borderRadius: const BorderRadius.all(
@@ -31,10 +31,16 @@ class Task3 extends StatelessWidget {
                   ),
                 ),
                 Expanded(
-                  child: CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
-                    radius: 40,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: NetworkImage(
+                            'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),
+                        radius: 40,
+                      ),
+                    ],
                   ),
                 ),
               ],
@@ -53,6 +59,7 @@ class Task3 extends StatelessWidget {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
                   "09/07/2023",
